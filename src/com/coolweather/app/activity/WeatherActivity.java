@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -89,6 +90,7 @@ public class WeatherActivity extends Activity implements OnClickListener {
 		case R.id.switch_city:
 			Intent intent = new Intent(this, ChooseAreaActivity.class);
 			intent.putExtra("from_weather_activity", true);
+			Log.d("test", "switch");
 			startActivity(intent);
 			finish();
 			break;
